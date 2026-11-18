@@ -41,7 +41,7 @@ public abstract class InventoryHelper {
 			int resultSlotIndex = rsh.getResultSlot().getContainerSlot();
 			ItemStack outStack = getResultStack();
 			if(InputHelper.isAltPressed() || (outStack != null && !hasSpace(inv, outStack))){
-				ply.drop(true);
+				im.dropItem(ply, true);
 			}
 			im.handleContainerInput(rsh.containerId, resultSlotIndex, 0, ContainerInput.QUICK_MOVE, ply);
 		}
